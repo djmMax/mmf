@@ -110,6 +110,7 @@ class TestReporter(Dataset):
 
     def get_dataloader(self):
         other_args = self._add_extra_args_for_dataloader()
+        print('DataLoader:', other_args, self.num_workers,self.config.training.pin_memory)
         return DataLoader(
             dataset=self.current_dataset,
             collate_fn=BatchCollator(

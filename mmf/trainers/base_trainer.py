@@ -529,6 +529,7 @@ class BaseTrainer:
 
             while reporter.next_dataset():
                 dataloader = reporter.get_dataloader()
+                # print('--------Dataloader: ',dataloader)
 
                 for batch in tqdm(dataloader):
                     prepared_batch = reporter.prepare_batch(batch)

@@ -51,9 +51,9 @@ def load_pretrained_model(model_name_or_path, *args, **kwargs):
     for ckpt_type in allowed_ckpt_types:
         ckpts.extend(glob.glob(os.path.join(download_path, ckpt_type)))
 
-    assert (
-        len(ckpts) == 1
-    ), "None or multiple checkpoints files. MMF doesn't know what to do."
+    #assert (
+    #    len(ckpts) == 1
+    #), "None or multiple checkpoints files. MMF doesn't know what to do."
 
     _hack_imports()
 

@@ -522,6 +522,8 @@ class Configuration:
                 lr = config.learning_rate
                 config.optimizer.params.lr = lr
 
+        # print('-------config.training.device:', config.training.device)
+        # print('-------torch.cuda.is_available():', config.training.device)
         if not torch.cuda.is_available() and "cuda" in config.training.device:
             warnings.warn(
                 "Device specified is 'cuda' but cuda is not present. "
